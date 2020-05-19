@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Mi Guatemala</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Mi<br>Guatemala</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#turismo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Lugares Turísticos</a> 
+    <a href="#comidas-tipicas" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Comidas típicas</a> 
+    <a href="#costumbres" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Costumbres</a> 
+    <a href="#tradiciones" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tradiciones</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Menu -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Lugares Turísticos -->
+  <div class="w3-container" style="margin-top:80px" id="turismo">
+    <h1 class="w3-jumbo"><b>Guatemala</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Lugares turísticos.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Imagenes de lugares turisticos -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="imagenes\lago-de-atitlan.jpg" style="width:100%" onclick="onClick(this)" alt="Lago de Atitlan">
+      <img src="imagenes\antigua-guatemala.jpg" style="width:100%" onclick="onClick(this)" alt="Antigua Guatemala">
+      <img src="imagenes\semuc_champey_el_mirador-road_affair.jpg" style="width:100%" onclick="onClick(this)" alt="Semuc Champey">
+    </div>
+
+    <div class="w3-half">
+      <img src="imagenes\volcan-de-pacaya.jpg" style="width:100%" onclick="onClick(this)" alt="Volcan de pacaya">
+      <img src="imagenes\tikal.png" style="width:100%" onclick="onClick(this)" alt="Tikal">
+      <img src="imagenes\irtra-retalhueu.jpg" style="width:100%" onclick="onClick(this)" alt="Irtra de Retalhuleu">
+    </div>
+  </div>
+
+  <!-- Modal-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Lugares turisticos informacion -->
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxlarge w3-text-red"><b>Lago de Atitlán.</b></h1>
+    <p>El accidente hidrográfico más importante del departamento de Sololá en Guatemala lo constituye el lago de Atitlán, que es una de las principales fuentes económicas del departamento, pues además de ser un centro turístico de mucho atractivo, sirve de mucho apoyo comercial. En los márgenes del lago se alzan los volcanes de Atitlán (3537 msnm1​), Tolimán (3158 msnm) y volcán San Pedro (3020 msnm). El lago está situado a 1560 metros sobre el nivel del mar y tiene 18 km de longitud. Su profundidad, que varía en muchos puntos, es desconocida, sin embargo se han sondeado más de 350 metros de profundidad.
+    </p>
+    <h1 class="w3-xxlarge w3-text-red"><b>Antigua Guatemala.</b></h1>
+    <p>Antigua Guatemala es una pequeña ciudad rodeada por volcanes en el sur de Guatemala. Es famosa por sus edificios coloniales españoles, muchos de ellos restaurados después del terremoto de 1773 que terminó con el régimen de 200 años de Antigua como la capital colonial de Guatemala. Algunos ejemplos destacados de la arquitectura incluyen La Merced, una baja iglesia amarilla y blanca de estilo barroco. Es una parte integral de la famosa Semana Santa en la ciudad, con desfiles y rituales.
+    </p>
+        <h1 class="w3-xxlarge w3-text-red"><b>Semuc  Champey.</b></h1>
+    <p>Semuc Champey (donde el río se esconde bajo las piedras), es un enclave natural localizado próximo al municipio guatemalteco de Lanquín (12 km aprox. al sur de Lanquín), en el departamento de Alta Verapaz, Guatemala. En el mismo, en medio de un espeso bosque tropical se halla un puente natural de piedra caliza de unos 300 metros de largo por el cual fluye el río Cahabón y en cuyos alrededores se encuentran una gran cantidad de pozas de 1 a 3 m de profundidad, cuyo color verde turquesa o color jade cambia a lo largo del año variando con el clima, el sol y otros factores naturales. Al final puede observarse al río Cahabón como se interna en una caverna de piedra caliza, área muy peligrosa para acercarse dentro del río por la fuerza del agua, sólo se permite observar a distancia este fenómeno geográfico natural.
+    </p>
+        <h1 class="w3-xxlarge w3-text-red"><b>Volcan de Pacaya.</b></h1>
+    <p>Pacaya es un volcán complejo activo en Guatemala, que entró en erupción por primera vez hace aproximadamente 23,000 años y ha entrado en erupción al menos 23 veces desde la invasión española de Guatemala. Pacaya se eleva a una altura de 2,552 metros..
+    </p>
+        <h1 class="w3-xxlarge w3-text-red"><b>Tikal.</b></h1>
+    <p>Tikal (o Tik'al, de acuerdo con la ortografía maya moderna) es uno de los mayores yacimientos arqueológicos y centros urbanos de la civilización maya precolombina. Está situado en el municipio de Flores, en el departamento de Petén, en el territorio actual de la República de Guatemala y forma parte del Parque nacional Tikal, que fue declarado Patrimonio de la Humanidad, por Unesco, en 1979.
+    </p>
+        <h1 class="w3-xxlarge w3-text-red"><b>IRTRA.</b></h1>
+    <p>IRTRA (Instituto de Recreación de los Trabajadores de la Empresa Privada de Guatemala) es una Institución guatemalteca dedicada a proveer esparcimiento y recreación con excelencia en el servicio. Un miembro del IRTRA tiene el derecho, con su tarjeta de identificación (Carnet de Afiliado), a entrar de forma gratuita a los distintos parques con un máximo de 5 miembros de la familia (padres, esposo(a), e hijos). Los que no son afiliados y también los turistas extranjeros pueden utilizar las instalaciones del IRTRA, pagando su precio de entrada..
+    </p>
+  </div>
+  
+  <!-- Comidas Típicas -->
+  <div class="w3-container" id="comidas-tipicas" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Comidas Típicas.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>La mayoría de los alimentos tradicionales en la cocina guatemalteca se basan en la cocina maya, con influencia española, y destacan el maíz, los chiles y los frijoles como ingredientes clave.  Guatemala es famosa por el aguacate Hass y el lugar de nacimiento del chocolate, creado por primera vez por los mayas..</p>
+    </p>
+    <p><b>Agunos platillos típicos de los mas degustados:</p>
+  </div>
+  
+  <!-- Comidas Típicas -->
+  <div class="w3-row-padding">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes\el-tamal.jpg" alt="El Tamal" style="width:100%">
+        <div class="w3-container">
+          <h3>El tamal</h3>
+          <p>El tamal (del náhuatl tamalli) es un alimento de origen mesoamericano preparado generalmente a base de masa de maíz rellena de carnes, vegetales, chiles, frutas, salsas y otros ingredientes. ​Son envueltas en hojas vegetales como de mazorca de maíz o de plátano, bijao, maguey, aguacate, canak, entre otras, e incluso papel de aluminio o plástico, y cocida en agua o al vapor. Pueden tener sabor dulce o salado. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes\el-chuchito.jpg" alt="El chuchito" style="width:100%">
+        <div class="w3-container">
+          <h3>El chuchito</h3>
+          <p>El chuchito es un plato nacional, tradicional y emblemático de la gastronomía Guatemalteca, elaborado a base de masa de maíz, y generalmente va mezclado de un recado o salsa de tomate y con un relleno que puede ser de carne de pollo o de cerdo. Este chuchito suele ir acompañado de una salsa de tomate y espolvoreado con queso duro de Zacapa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes\el-rellenito.png" alt="El rellenito" style="width:100%">
+        <div class="w3-container">
+          <h3>El rellenito</h3>
+             <p>Rellenitos de plátano es un plato de puré de plátanos dulces rellenos con una mezcla de frijoles refritos, chocolate y canela. Las bolas en forma de huevo ensambladas se fríen y luego se sirven con azúcar en polvo o miel encima. Es un postre común y muy popular en la cocina de Guatemala.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Tradiciones -->
+  <div class="w3-container" id="tradiciones" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Tradiciones.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Comer un huevo de chocolate en Pascuas o un turrón en Navidad, almorzar pasta los domingos o vestir de negro en señal de luto son algunas tradiciones extendidas en varios países. La tradición, por lo tanto, es algo que se hereda y que forma parte de la identidad. En Guatemala también tiene sus propias tradiciones.</p>
+    <p><b>Ejemplos de las tradiciones de Guatemala:</p>
+  </div>
+  
+  <!-- Tradiciones -->
+  <div class="w3-row-padding">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes\quema-del-diablo.jpg" alt="El Tamal" style="width:100%">
+        <div class="w3-container">
+          <h3>La quema del diablo</h3>
+          <p>La quema del diablo es una celebración mágico-religiosa guatemalteca. Su origen parece ser mucho más legendario que real. La cual es una maldición porque los diablos cuando los queman se mueven y retuercen como si sintieran.<br>La Quema del Diablo es una celebración mágico-religiosa en Guatemala. Su origen, según varios historiadores, afirman que la usanza de quemar figuras en esta fecha se originó en el siglo XVII. Ya qué, había la necesidad de alumbrar el paso de la procesión de la Virgen de la Inmaculada Concepción.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes\semana-santa.jpg" alt="El chuchito" style="width:100%">
+        <div class="w3-container">
+          <h3>Semana Santa</h3>
+          <p>ELa Semana Santa​ es la conmemoración cristiana anual de la Pasión de Cristo, es decir, de la entrada a Jerusalén, la última cena, el viacrucis, la muerte y resurrección de Jesús de Nazaret. Por eso, es un período de intensa actividad litúrgica dentro de las diversas confesiones cristianas. Da comienzo con el Domingo de Ramos y finaliza el Domingo de Resurrección, aunque su celebración suele iniciarse en varios lugares el viernes anterior (Viernes de Dolores). La fecha de la celebración es variable (entre marzo y abril según el año) ya que depende del calendario lunar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="imagenes\danza-del-palo-volador.jpg" alt="El rellenito" style="width:100%">
+        <div class="w3-container">
+          <h3>Danza del palo volador</h3>
+             <p>La danza del palo volador, en Quiché, es una tradición en la que se coloca en enorme tronco de árbol en una estructura giratoria, del que diversos bailarines se descuelgan lanzándose desde lo alto mientras bailan y giran.
+              <br><br>Estos bailarines representan la leyenda del Popol Vuh de los gemelos Hunbatz y Hunchouén, los cuales fueron transformados en monos como castigo por haber deseado la muerte de sus hermanos menores.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Costumbres -->
+  <div class="w3-container" style="margin-top:80px" id="costumbres">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Costumbres.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Imagenes de costumbres -->
+  <div class="w3-container" style="margin-top:75px">
+      <img src="imagenes\quema-del-torito.jpg" style="width:75%" onclick="onClick(this)" alt="Quema del Torito">
+      <h1 class="w3-xxlarge w3-text-red"><b>Quema del Torito.</b></h1>
+    <p>El accidente hidrográfico más importante del departamento de Sololá en Guatemala lo constituye el lago de Atitlán, que es una de las principales fuentes económicas del departamento, pues además de ser un centro turístico de mucho atractivo, sirve de mucho apoyo comercial. En los márgenes del lago se alzan los volcanes de Atitlán (3537 msnm1​), Tolimán (3158 msnm) y volcán San Pedro (3020 msnm). El lago está situado a 1560 metros sobre el nivel del mar y tiene 18 km de longitud. Su profundidad, que varía en muchos puntos, es desconocida, sin embargo se han sondeado más de 350 metros de profundidad.
+    </p>
+      <img src="imagenes\barrilete-gigante.jpg" style="width:75%" onclick="onClick(this)" alt="Los barriletes gigantes">
+     <h1 class="w3-xxlarge w3-text-red"><b>Los barriletes gigantes.</b></h1>
+    <p>Relacionados con el Día de los Muertos, son estructuras de papel hechas por los lugareños para ahuyentar a los espíritus de hogares y cementerios. En el Festival de Santiago todo empieza a las 4 de la mañana para llevarlos a camposanto y terminarlos de armar.
+    </p>
+      <img src="imagenes\irtra-retalhueu.jpg" style="width:75%" onclick="onClick(this)" alt="El fiambre">
+                <h1 class="w3-xxlarge w3-text-red"><b>El fiambre.</b></h1>
+    <p>Dentro de la gastronomía, este plato es uno de los más emblemáticos de la cultura guatemalteca y se consume durante el Día de Todos los Santos (1º de noviembre). Su creación se remonta a la época colonial, tiene un aspecto de ensalada y puede incluir hasta 50 ingredientes diferentes..
+    </p>
+    </div>
+  </div>
+
+ 
+
+
+  
+<!-- Fin -->
+</div>
+
+<!-- W3.CSS Container -->
+<div id="contact" class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+<p class="w3-right">Creado por <a href="mailto:madelineescotto@colegioentrecampos.edu.gt">Madeline Escotto</a> - 4to. Bachillerato - Colegio Entrecampos</p><br>
+</div>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
